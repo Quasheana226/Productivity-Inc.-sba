@@ -6,6 +6,11 @@ const { Schema } = mongoose;
 // A user can have both if they link accounts — email is the common key.
 const userSchema = new Schema(
   {
+    username: {
+      type: String,
+      required: [true, 'Username is required'],
+      trim: true,
+    },
     // Required for both local and GitHub users; enforced unique at DB level
     email: {
       type: String,
