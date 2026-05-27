@@ -12,12 +12,12 @@ const db = mongoose.connection;
 
 // Log errors to the console if the connection fails
 db.on('error', (err) => {
-  console.error('❌ MongoDB connection error:', err);
+  console.error('MongoDB connection error:', err);
 });
 
 // Log success when connected
 db.once('open', () => {
-  console.log('✅ MongoDB connected successfully.');
+  console.log('MongoDB connected successfully.');
 });
 
 // Export the connection so server.js can require it
